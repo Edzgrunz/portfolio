@@ -1,0 +1,138 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* overflow: hidden; */
+}
+
+.background {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(35deg, rgb(0, 211, 0) , blue, red);
+    background-size: 300% 300%;
+    animation: backgroundEffect 12s ease-in-out infinite;
+    filter: grayscale(0.5);
+}
+
+@keyframes backgroundEffect {
+    0% {
+        background-position: 20% 70%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 20% 70%;
+    }
+}
+
+.container {
+    width: 100%
+}
+
+
+/* ----- CARD -----------------------------------------------------------------------------------*/
+
+.card-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text {
+    cursor: default;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: -0.5em;
+    color: white;
+    transition: 0.3s;
+}
+
+.card-text:hover {
+    color: black;
+    font-size: 3.5em;
+}
+
+.git-link {
+    cursor: pointer;
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.git-link:hover{
+    color: black;
+    font-size: 2.5em;
+}
+
+/* ----- PROJECTS -----------------------------------------------------------------------------------*/
+
+.git-projects-container {
+    background: white;
+    width: 100%;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4em;
+}
+
+.git-project-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.git-project-description-container {
+    width: 45%;
+    padding: 1em;
+    text-align: center;
+    transition: 0.15s;
+}
+
+.git-project-name {
+    font-size: 1.5em;
+}
+
+.git-project-description {
+    font-size: 1em;
+}
+
+.git-project-link {
+    width: 30%;
+    transition: 0.3s;
+}
+
+.git-project-link:hover {
+    width: 45%;
+}
+
+.git-project-link:hover + .git-project-description-container:first-child {
+    font-size: 2.5em;
+}
+
+.git-project-link:hover + .git-project-description-container:last-child {
+    font-size: 1.5em;
+}
